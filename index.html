@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>title         </title>
+        <link rel="stylesheet" href="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- link với file bootstrap.min.css tải về  -->
+       <script src="/MangCamBien_bootstrap/script.js"></script>
+        <link href="/MangCamBien_bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="row">
+            <!-- Nền vàng, chữ xanh -->
+            <h3 class="bg-warning text-success">Nguyễn Quốc Tuấn-B19DCDT206</h3>
+        </div>
+        <!-- Hàng đầu tiên, bên trong hàng có 3 cột (12/4) nên đặt là col-4 -->
+        <div class="row" style="height: 100px;">
+            <!-- nền xanh lá, chứ giữa -->
+            <div class="col-4 text-center" id="NDto">  <!-- Không để màu nền Bootstrap 5   -->
+                <p id="ND"></p>     <!-- Cái này dùng để giữ chỗ cho cái biến nhiệt độ nhảy vào   -->
+            </div>
+            <!-- Nền xám chữ nằm giữa -->
+            <div class="col-4 bg-secondary text-center">DA</div>
+            <!-- Nền xanh dương, chữ nằm giữa -->
+            <div class="col-4 bg-primary text-center">AT</div>
+        </div> 
+        <!-- 2 cột 1 cột là chart, một cột là nút nhấn -->
+        <div class="row" id="btn" style="height: 500px;">
+            <!-- Nền vàng chiếm 8/12 cột (col-8) -->
+            <div class="col-8 bg-warning">Chart</div>
+            
+            <div class="col-4">
+                <!-- Trong cột có 2 hàng, mỗi hàng sẽ lấy 1 cột(col-12) -->
+                <div class="row">
+                    <div class="col-12 " id="nutnhan" style="height: 250px; background-color: aqua;" > <!-- Không để màu nền Bootstrap 5   -->
+                        <button type="button" class="btn btn-success" onclick="btn1on()">btn1</button>
+                        <button type="button" class="btn btn-success" onclick="btn1off()">bnt2</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" id="nutnhan2" style="height:250px;background-color :rgb(173,255,47);" > <!-- Không để màu nền Bootstrap 5   -->
+                        <button type="button" class="btn btn-success" onclick="btn2on()">btn1</button>
+                        <button type="button" class="btn btn-success" onclick="btn2off()">bnt2</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var NDo = 69;
+            document.getElementById("ND").innerHTML = NDo; // Hàm nhét biến vào cái giữ chỗ
+            if (NDo > 35)
+            {
+                document.getElementById("NDto").style.background= "red" // Nếu thì
+            }
+            if (NDo > 20 && NDo < 35)
+            {
+                document.getElementById("NDto").style.background= "#6882B3"
+            }
+            if (NDo < 20)
+            {
+                document.getElementById("NDto").style.background= "#BEDCE7"
+            }
+        </script>
+    </body>
+</html>
